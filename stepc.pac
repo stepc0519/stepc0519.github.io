@@ -55,8 +55,20 @@ function FindProxyForURL(url, host) {
         || shExpMatch(url, "*onedrive*")
         || shExpMatch(url, "*github*")
         || shExpMatch(url, "*android.com*")
+
+        // for o365
+        // Optimize Required
         || shExpMatch(url, "*stephenzone.sharepoint.com*")
         || shExpMatch(url, "*stephenzone-my.sharepoint.com*")
+        || isInNet(host,"13.107.136.0","255.255.252.0") // 13.107.136.0/22
+        || isInNet(host,"40.108.128.0","255.255.128.0") // 40.108.128.0/17
+        || isInNet(host,"52.104.0.0","255.252.0.0") // 52.104.0.0/14
+        || isInNet(host,"104.146.128.0","255.255.128.0") //104.146.128.0/17
+        || isInNet(host,"150.171.40.0","255.255.252.0") //150.171.40.0/22
+      
+
+        // || isInNet(host,"0000","0000")
+
         || shExpMatch(url, "*storage.live.com*")
         || shExpMatch(url, "*ssw.live.com*")
         || shExpMatch(url, "*log.optimizely.com*")
@@ -79,11 +91,14 @@ function FindProxyForURL(url, host) {
         || shExpMatch(url, "*svc.ms*")
         || shExpMatch(url, "*stephenzone-files.sharepoint.com*")
         || shExpMatch(url, "*stephenzone-myfiles.sharepoint.com*")
+        //end for o365
+
+
         || shExpMatch(url, "*anaconda*")
         || shExpMatch(url, "*toomics.com*")
         // || shExpMatch(url, "*keywords*")
         // || shExpMatch(url, "*keywords*")
-
+        // || isInNet(host,"0000","0000")
         || shExpMatch(url, "*google*")
     ) {
         return local_ssr; direct;
