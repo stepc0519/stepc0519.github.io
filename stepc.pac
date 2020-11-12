@@ -29,7 +29,7 @@ function FindProxyForURL(url, host) {
     //     // }
     // // }
 
-    if (hExpMatch(url, "*ip138*")
+    if (shExpMatch(url, "*ip138*")
         || shExpMatch(url, "*google*")
     ) {
         return local_ssr; direct;
