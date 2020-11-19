@@ -29,7 +29,7 @@ function FindProxyForURL(url, host) {
     //     // }
     // // }
 
-    if (shExpMatch(url, "*ip138*")
+    if (shExpMatch(url, "*dropbox*")
         || shExpMatch(url, "*microsoftonline*")
         || shExpMatch(url, "*dropbox*")
         || shExpMatch(url, "*mit.edu*")
