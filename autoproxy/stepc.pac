@@ -475,7 +475,7 @@ function FindProxyForURL(url, host) {
 
 
         // Java/Kotlin
-        || shExpMatch(url,"*gradle.org*")
+        || shExpMatch(url,"*gradle*")
     ) {
         return local_ssr; direct;
     }
