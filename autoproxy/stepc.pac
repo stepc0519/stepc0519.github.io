@@ -472,6 +472,10 @@ function FindProxyForURL(url, host) {
         // || shExpMatch(url, "*keywords*")
         // || isInNet(host,"0000","0000")
         || shExpMatch(url, "*google*")
+
+
+        // Java/Kotlin
+        || shExpMatch(url,"*gradle.org*")
     ) {
         return local_ssr; direct;
     }
